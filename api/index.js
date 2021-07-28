@@ -111,4 +111,6 @@ server.listen(4000, () => {
   console.log("listening on *:4000");
 });
 
+app.use(express.static("public"));
+
 module.exports = app;
