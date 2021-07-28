@@ -4,6 +4,7 @@ const socket = require("socket.io");
 const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectId;
+const { readFileSync } = require("fs");
 
 const uri =
   "mongodb+srv://bvignal:admin@cluster0.kqxcw.mongodb.net/shopping?retryWrites=true&w=majority";
