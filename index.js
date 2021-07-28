@@ -4,6 +4,7 @@ const socket = require("socket.io");
 const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectId;
+const serverless = require("serverless-http");
 
 const uri =
   "mongodb+srv://bvignal:admin@cluster0.kqxcw.mongodb.net/shopping?retryWrites=true&w=majority";
@@ -109,3 +110,5 @@ client.connect((err) => {
 server.listen(4000, () => {
   console.log("listening on *:4000");
 });
+
+module.exports.handler = serverless(app);
