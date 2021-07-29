@@ -4,7 +4,8 @@
   "description": "api for shopping web application made with preact and socket .io",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./api/index.js",
+    "start": "node api/index.js",
+    "start:dev": "nodemon api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
