@@ -5,6 +5,8 @@ const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectId;
 const { readFileSync } = require("fs");
+require("dotenv").config();
+const port = process.env.PORT || 4000;
 
 const uri =
   "mongodb+srv://bvignal:admin@cluster0.kqxcw.mongodb.net/shopping?retryWrites=true&w=majority";
@@ -107,7 +109,7 @@ client.connect((err) => {
   });
 });
 
-server.listen(4000, () => {
+server.listen(port, () => {
   console.log("listening on *:4000");
 });
 
